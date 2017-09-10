@@ -1,0 +1,17 @@
+{
+  "name": "matmap-corporative",
+  "authors": [
+    "Diego Asensio <diegonjin@gmail.com>"
+  ],
+  "description": "MatMap Corporative Web",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
