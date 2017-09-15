@@ -1,3 +1,7 @@
+html body{
+  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
 nav.matmap-navbar {
   color: #162945
 }
@@ -8,7 +12,11 @@ nav.matmap-navbar .navbar-brand {
 nav.matmap-navbar .navbar-nav>li>a {
   color: #162945
 }
-
+#page-top {
+  background: url(../resources/img/header.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 #page-top .logo {
   height: 150px;
 }
@@ -21,7 +29,7 @@ header {
     position: fixed;
     width:100%;
     z-index: 1;
-    height: 80%;
+    height: 65%;
     overflow: hidden;
     top: 0;
     left: 0;
@@ -29,7 +37,7 @@ header {
 
 .content-wrapper{
     background-color: white;
-    top: 80%;
+    top: 65%;
     min-height: 12%;
     position:absolute;
     z-index: 2;
@@ -43,15 +51,16 @@ header .container {
 
 header img {
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto;
+}
+
+header .intro-text {
+  position: relative;
+  top: -30px;
 }
 
 header .intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
-    font-weight: 700;
+    font-size: 16px;
 }
 
 header .intro-text .skills {
@@ -285,8 +294,8 @@ section.alternative {
 }
 .five .member-img {
   width: 120px;
-  border-radius: 100%;
 }
+
 .five > li h3 em {
   display: block;
   font-style: normal;
@@ -377,14 +386,12 @@ to {
 
 .timeline>li:nth-child(even) {
     position: relative;
-    margin-bottom: 50px;
     height: 180px;
     right:-100px;
 }
 
 .timeline>li:nth-child(odd) {
     position: relative;
-    margin-bottom: 50px;
     height: 180px;
     left:-100px;
 }
@@ -426,10 +433,6 @@ to {
     z-index: 100;
     position: absolute;
     left: 50%;
-    border: 7px solid #1ba5b8;
-    border-radius: 100%;
-    background-color: #1ba5b8;
-    box-shadow: 0 0 5px #1ba5b8;
     width: 200px;
     height: 200px;
     margin-left: -100px;
@@ -478,7 +481,7 @@ to {
   margin-top:22px;
     margin-bottom: 4px;
     padding:0;
-    color: #b3b3b3;
+    color: white;
 }
 
 .timeline .timeline-heading h4.subheading {
@@ -492,36 +495,36 @@ to {
 .timeline .timeline-body>p,
 .timeline .timeline-body>ul {
     margin-bottom: 0;
-    color:#808080;
+    color:white;
 }
 /*Style for even div.line*/
 .timeline>li:nth-child(odd) .line:before {
     content: "";
     position: absolute;
-    top: 60px;
+    top: 75px;
     bottom: 0;
     left: 690px;
     width: 4px;
-    height:340px;
+    height:200px;
     background-color: #1ba5b8;
-    -ms-transform: rotate(-44deg); /* IE 9 */
-    -webkit-transform: rotate(-44deg); /* Safari */
-    transform: rotate(-44deg);
+    -ms-transform: rotate(-50deg); /* IE 9 */
+    -webkit-transform: rotate(-50deg); /* Safari */
+    transform: rotate(-50deg);
     box-shadow: 0 0 5px #1ba5b8;
 }
 /*Style for odd div.line*/
 .timeline>li:nth-child(even) .line:before  {
     content: "";
     position: absolute;
-    top: 60px;
+    top: 75px;
     bottom: 0;
     left: 450px;
     width: 4px;
-    height:340px;
+    height:200px;
     background-color: #1ba5b8;
-    -ms-transform: rotate(44deg); /* IE 9 */
-    -webkit-transform: rotate(44deg); /* Safari */
-    transform: rotate(44deg);
+    -ms-transform: rotate(50deg); /* IE 9 */
+    -webkit-transform: rotate(50deg); /* Safari */
+    transform: rotate(50deg);
     box-shadow: 0 0 5px #1ba5b8;
 }
 /* Medium Devices, .visible-md-* */
@@ -637,6 +640,11 @@ to {
 #myCarousel {
   background: rgba(255,255,255,0.1);
   padding: 50px;
+}
+
+#myCarousel a{
+  color: white;
+  text-decoration: none;
 }
 
 .quote {
