@@ -11,15 +11,17 @@ nav.matmap-navbar .navbar-brand {
   padding: 0;
 }
 nav.matmap-navbar .logo {
+  padding: 5px 5px;
   height: 100%;
 }
 nav.matmap-navbar .navbar-nav>li>a {
   color: #1D293A
 }
 #page-top {
-  background: url(../resources/img/header.svg);
+  background: url(../resources/img/header.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 #page-top .logo {
   height: 150px;
@@ -40,20 +42,217 @@ header {
 }
 
 .header-marker {
-  height: 50px;
-  width: 35px;
-  background-color: yellow;
+  height: 90px;
+  width: 60px;
   position: absolute;
-  top: -100px;
-  animation: fallingMarkers 5s linear;
-  -webkit-animation: fallingMarkers 5s linear;
-  -moz-animation: fallingMarkers 5s linear;
+  top: -200px;
 }
 
+.header-marker .pin {
+  height: 90px;
+  width: 60px;  
+}
+
+.header-marker .pulse {
+  background: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  left: 60%;
+  top: 40%;
+  position: absolute;
+  margin: 11px 0px 0px -12px;
+  transform: rotateX(55deg);
+  z-index: -2;
+}
+
+.header-marker .pulse::after {
+  content: "";
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  margin: -13px 0 0 -13px;
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0.0;
+  box-shadow: 0 0 1px 2px #89849b;
+  left: 0%;
+}
+
+
+
   .marker-1 {
-    top:200px;
+    top: 45%;
+    background-image: url(../resources/img/markers/marker1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fallingMarkers 2.5s linear;
+    -webkit-animation: fallingMarkers 2.5s linear;
+    -moz-animation: fallingMarkers 2.5s linear;
   }
 
+  .marker-1 .pulse::after {
+    animation-delay: 2.6s;
+  }
+
+  .marker-2 {
+    top: 35%;
+    left: 20%;
+    background-image: url(../resources/img/markers/marker2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fallingMarkers 4s linear;
+    -webkit-animation: fallingMarkers 4s linear;
+    -moz-animation: fallingMarkers 4s linear;
+    }
+
+    .marker-2 .pulse::after {
+      animation-delay: 4.1s;
+    }
+  .marker-3 {
+    top:50%;
+    left: 30%;
+    background-image: url(../resources/img/markers/marker3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fallingMarkers 2s linear;
+    -webkit-animation: fallingMarkers 2s linear;
+    -moz-animation: fallingMarkers 2s linear;
+  }
+
+  .marker-3 .pulse::after {
+    animation-delay: 2.1s;
+  }
+  .marker-4 {
+    top: 70%;
+    left: 45%;
+    background-image: url(../resources/img/markers/marker4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fallingMarkers 3s linear;
+    -webkit-animation: fallingMarkers 3s linear;
+    -moz-animation: fallingMarkers 3s linear;
+  }
+
+  .marker-4 .pulse::after {
+    animation-delay: 3.1s;
+  }
+  .marker-5 {
+    top: 75%;
+    left: 60%;
+    background-image: url(../resources/img/markers/marker5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fallingMarkers 1s linear;
+    -webkit-animation: fallingMarkers 1.5s linear;
+    -moz-animation: fallingMarkers 1.5s linear;
+  }
+  .marker-5 .pulse::after {
+    animation-delay: 1.6s;
+  }
+  .marker-6 {
+    top:18%;
+    left: 55%;
+    background-image: url(../resources/img/markers/marker6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fallingMarkers 4.5s linear;
+    -webkit-animation: fallingMarkers 4.5s linear;
+    -moz-animation: fallingMarkers 4.5s linear;
+  }
+  .marker-6 .pulse::after {
+    animation-delay: 4.6s;
+  }
+  .marker-7 {
+    top:28%;
+    left: 65%;
+    background-image: url(../resources/img/markers/marker7.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fallingMarkers 5s linear;
+    -webkit-animation: fallingMarkers 5s linear;
+    -moz-animation: fallingMarkers 5s linear;
+  }
+  .marker-7 .pulse::after {
+    animation-delay: 5.1s;
+  }
+  .marker-8 {
+    top: 25%;
+    left: 70%;
+    background-image: url(../resources/img/markers/marker4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fallingMarkers 3s linear;
+    -webkit-animation: fallingMarkers 3s linear;
+    -moz-animation: fallingMarkers 3s linear;
+  }
+  .marker-8 .pulse::after {
+    animation-delay: 3.1s;
+  }
+  .marker-9 {
+    top: 35%;
+    left: 85%;
+    background-image: url(../resources/img/markers/marker2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fallingMarkers 4s linear;
+    -webkit-animation: fallingMarkers 4s linear;
+    -moz-animation: fallingMarkers 4s linear;
+    }
+    .marker-9 .pulse::after {
+      animation-delay: 4.1s;
+    }
+    .marker-10 {
+      top: 15%;
+      left: 35%;
+      background-image: url(../resources/img/markers/marker5.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fallingMarkers 1s linear;
+      -webkit-animation: fallingMarkers 1.5s linear;
+      -moz-animation: fallingMarkers 1.5s linear;
+    }
+    .marker-10 .pulse::after {
+      animation-delay: 1.6s;
+    }
+
+
+@media only screen and (max-width: 767px) {
+
+  .marker-1 {
+    
+  }
+  .marker-2 {
+    top: 20%;
+  }
+  .marker-3 {
+    top: 80%;
+    left: 20%;
+  }
+  .marker-4 {
+    top:75%;
+  }
+  .marker-5 {
+    left: 78%;
+  }
+  .marker-6 {
+    left: 60%;
+  }
+  .marker-7 {
+    left: 75%;
+  }
+  .marker-8 {
+    left: 85%;
+  }
+  .marker-9 {
+    display: none;
+  }
+  .marker-10 {
+    display: none;
+  }
+
+}
 .content-wrapper{
     background-color: white;
     top: 65%;
@@ -230,11 +429,15 @@ section.alternative {
   margin: 0px 20px 20px 20px;
   text-align: center;
 }
-.five > li img {
+.five > li img,
+.five > li i {
   margin-top: -5px;
 }
-.five > li:hover img {
+.five > li:hover img,
+.five > li:hover i
+{
   margin-top: 30px;
+  color: #1D293A;
 }
 .five > li img.more-about,
 .five > li i.more-about{
@@ -349,7 +552,7 @@ section.alternative {
 .five .social li a:hover {
   opacity: 0.5;
 }
-.five .social li img {
+.five .social li i {
   width: 24px;
 }
 .five > li:hover .social li a {
@@ -362,7 +565,7 @@ section.alternative {
   -o-animation-delay: 0s;
   animation-delay: 0s;
 }
-.five .social li img {
+.five .social li i {
   width: 24px;
 }
  @-webkit-keyframes social-show {
@@ -620,38 +823,42 @@ to {
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 767px) {
+
   .timeline > li:nth-child(even) {
-    margin-bottom: 0px;
-    min-height: 0px;
+    margin-left: 0px;
     right: 0px;
+    display: inline-block;    
   }
   .timeline > li:nth-child(odd) {
-    margin-bottom: 0px;
-    min-height: 0px;
+    margin-right: 0px;
     left: 0px;
+    display: inline-block;    
   }
   .timeline>li .timeline-image {
-    position: static;
-    width: 150px;
-    height: 150px;
-    margin-bottom:0px;
+    left: 0px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
   }
   .timeline>li:nth-child(even) .timeline-image {
-    left: 0;
-    margin-left: 0;
+    position: relative;
   }
   .timeline>li:nth-child(odd) .timeline-image {
-    float:right;
-    left: 0px;
-    margin-left:0;
+    position: relative;
   }
   .timeline > li:nth-child(even) .timeline-panel {
+    float: none;
+    display: block;
     width: 100%;
-    padding: 0 0 20px 14px;
+    text-align: center;
+    padding: 0px 10px;
   }
   .timeline > li:nth-child(odd) .timeline-panel {
+    float: none;
+    display: block;
     width: 100%;
-    padding: 0 14px 20px 0px;
+    text-align: center;
+    padding: 0px 10px;
   }
   .timeline > li .line {
     display: none;
@@ -724,6 +931,24 @@ border: none;
           transform: translate(0px, -10px) scale(1.2);
 }
 
+
+@media only screen and (max-width: 767px) {
+
+  #fade-quote-carousel .profile-circle {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 5px solid #2AA1B0;
+    padding: 10px;
+    background-color: white;
+  }
+
+  #fade-quote-carousel blockquote {
+    font-size: 14px;
+  }
+
+}  
 /* prizes*/
 
 .prize {
@@ -799,6 +1024,10 @@ footer .footer-copyright {
   padding-top: 3px;
   padding-bottom: 3px;
   text-align: center;
+}
+
+footer .footer-copyright div {
+  display: inline-block;
 }
 
 footer .row {
@@ -894,6 +1123,15 @@ footer .btn {
   footer {
       text-align: center;
   }
+
+  footer .footer-copyright div {
+    display: block;
+  }
+
+
+  footer .footer-copyright div.separator {
+    display: none;
+  }
 }
 
 /***** Modal *****/
@@ -939,24 +1177,34 @@ footer .btn {
   0% {
   -webkit-transform: translate(0, -500px);
   }
-  75% {
-  -webkit-transform: translate(0px, -200px);
+  50% {
+  -webkit-transform: translate(0px, -250px);
   }
   100% {
-
-    top:200px;
-  -webkit-transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
   }
   }
 @-webkit-keyframes fallingMarkers {
   0% {
   -webkit-transform: translate(0, -500px);
   }
-  75% {
-  -webkit-transform: translate(0px, -200px);
+  50% {
+  -webkit-transform: translate(0px, -250px);
   }
   100% {
-    top:200px;
   -webkit-transform: translate(0px, 0px);
   }
   }
+
+  @keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
+    50% {
+    opacity: 1.0;
+    }
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+  }}
