@@ -82,7 +82,9 @@ $(function() {
 
   function saveEmail() {
     var inputEmail = $('#input-email').val();
-    var database = firebase.database().ref();
-    database.child('emails').push(inputEmail);
+    if(inputEmail) {
+      var database = firebase.database().ref();
+      database.child('emails').push(inputEmail);  
+    }
   }
 });
