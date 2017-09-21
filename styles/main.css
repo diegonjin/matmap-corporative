@@ -1136,32 +1136,32 @@ footer .btn {
 
 /***** Modal *****/
  
-.modal-backdrop.in {
+#modal-video .modal-backdrop.in {
   filter: alpha(opacity=7);
   opacity: 0.7;
 }
 
-.modal-content {
+#modal-video .modal-content {
   background: none;
   border: 0;
   -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
   -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
 }
 
-.modal-body {
+#modal-video .modal-body {
   padding: 0 25px 25px 25px;
 }
 
-.modal-header {
+#modal-video .modal-header {
   padding: 25px 25px 15px 25px;
   text-align: right;
 }
 
-.modal-header, .modal-footer {
+#modal-video .modal-header, .modal-footer {
   border: 0;
 }
 
-.modal-header .close {
+#modal-video .modal-header .close {
   float: none;
   margin: 0;
   font-size: 36px;
@@ -1208,3 +1208,53 @@ footer .btn {
     transform: scale(1.2, 1.2);
     opacity: 0;
   }}
+
+  /* Newsletter*/
+
+  #team {
+    padding-bottom: 0px;
+  }
+
+  .home-newsletter {
+    padding: 80px 0;
+    background: #2AA1B0;
+  }
+    
+    .home-newsletter .single {
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2; 
+    }
+    
+    .home-newsletter .single h2 {
+      font-size: 18px;
+      color: white;
+      margin-bottom: 10px; 
+    }
+    
+    .home-newsletter .single p {
+      font-size: 18px;
+      color: white;
+      margin-bottom: 40px; 
+    }
+
+    .home-newsletter .single .form-control {
+      height: 50px;
+      background: rgba(255, 255, 255, 0.6);
+      border-color: transparent;
+      border-radius: 20px 0 0 20px; 
+    }
+    
+    .home-newsletter .single .form-control:focus {
+      box-shadow: none;
+      border-color: #1D293A; 
+    }
+    
+    .home-newsletter .single .btn {
+      min-height: 50px; 
+      border-radius: 0 20px 20px 0;
+      background: #1D293A;
+      color: #fff;
+    }
