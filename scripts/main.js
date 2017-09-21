@@ -95,6 +95,8 @@ $(function() {
     } catch (error) {
       toggleErrorAlert();      
     }
+
+    setTimeout(hideAlerts, 5000);
   }
 
   function validateEmail(email) {
