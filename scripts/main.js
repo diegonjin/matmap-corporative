@@ -70,12 +70,12 @@ $(function() {
 
   function initializeDB() {
     var config = {
-      apiKey: "AIzaSyD31JyppZt5CSEMAbiTm57LStvJhmREquE",
-      authDomain: "matmapco-f672a.firebaseapp.com",
-      databaseURL: "https://matmapco-f672a.firebaseio.com",
-      projectId: "matmapco-f672a",
-      storageBucket: "matmapco-f672a.appspot.com",
-      messagingSenderId: "1052988661423"
+      apiKey: "AIzaSyCbcviz8HO15gTWlQpuQcVyW6ZYFTl2mmE",
+      authDomain: "matmapco-92c2d.firebaseapp.com",
+      databaseURL: "https://matmapco-92c2d.firebaseio.com",
+      projectId: "matmapco-92c2d",
+      storageBucket: "",
+      messagingSenderId: "728505959890"
     };
     firebase.initializeApp(config);
   }
