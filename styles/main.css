@@ -824,6 +824,15 @@ to {
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 767px) {
 
+  header .container {
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+
+  header .logo {
+    height: 100px;
+  }
+
   .timeline > li:nth-child(even) {
     margin-left: 0px;
     right: 0px;
