@@ -309,11 +309,29 @@
                             <div class="single">
                                 <h2>¿Quieres ser la primera persona en enterarte de todas las novedades sobre MatMap?</h2>
                                 <p><strong>¡Si, claro!</strong> Mi email es</p>                                
-                                <div class="input-group">
+                                <div class="input-group-newsletter input-group">
                                     <input id="input-email" type="email" class="form-control" placeholder="Introduce tu email">
                                     <span class="input-group-btn">
                                         <button id="btn-add-newsletters" class="btn btn-theme" type="submit">Suscribir</button>
                                     </span>
+                                </div>
+                                <div id="email-success-alert" class="alert alert-success alert-dismissible fade out hide" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <strong>¡Bienvenido al equipo MatMap!</strong> Te damos las gracias por seguirnos, te mantendremos informado de los avances de nuestro proyecto.
+                                </div>
+                                <div id="email-error-alert" class="alert alert-danger alert-dismissible fade out hide" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <strong>¡Oh, vaya! ¡Parece que hemos tenido un error!</strong> Por favor, ¿puedes volver a intentarlo? Para nosotros es muy importante. Prometemos que el responsable de esto sufrirá entre terribles sufrimientos.
+                                </div>
+                                <div id="email-validation-alert" class="alert alert-danger alert-dismissible fade out hide" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <strong>¡Oh, vaya! ¡Parece que no has introducido un email válido!</strong> Por favor, ¿puedes volver a intentarlo? Para nosotros es muy importante.
                                 </div>
                             </div>
                         </div>

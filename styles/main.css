@@ -1232,6 +1232,10 @@ footer .logo img {
       z-index: 2; 
     }
     
+    .input-group-newsletter {
+      margin-bottom: 10px;
+    }
+
     .home-newsletter .single h2 {
       font-size: 18px;
       color: white;

@@ -81,10 +81,49 @@ $(function() {
   }
 
   function saveEmail() {
-    var inputEmail = $('#input-email').val();
-    if(inputEmail) {
-      var database = firebase.database().ref();
-      database.child('emails').push(inputEmail);  
+    hideAlerts();
+    try {
+      var inputEmail = $('#input-email').val();
+      if(inputEmail && validateEmail(inputEmail)) {
+        var database = firebase.database().ref();
+        database.child('emails').push(inputEmail);
+        $('#input-email').val('');
+        toggleSuccessAlert();
+      } else {
+        toggleValidationAlert();
+      }
+    } catch (error) {
+      toggleErrorAlert();      
     }
   }
+
+  function validateEmail(email) {
+    var re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return re.test(email);
+  }
+
+  function hideAlerts() {
+    $('.alert').removeClass('in show');
+    $('.alert').addClass('hide out');
+  }
+
+  function toggleSuccessAlert(){
+    $('#email-success-alert').toggleClass('show hide'); 
+    $('#email-success-alert').toggleClass('in out');
+    return false; // Keep close.bs.alert event from removing from DOM
+  }
+
+  function toggleErrorAlert(){
+    $('#email-error-alert').toggleClass('show hide');
+    $('#email-error-alert').toggleClass('in out'); 
+    return false; // Keep close.bs.alert event from removing from DOM
+  }
+  function toggleValidationAlert(){
+    $('#email-validation-alert').toggleClass('show hide');
+    $('#email-validation-alert').toggleClass('in out'); 
+    return false; // Keep close.bs.alert event from removing from DOM
+  }
+    $('#email-success-alert').on('close.bs.alert', toggleSuccessAlert);
+    $('#email-error-alert').on('close.bs.alert', toggleErrorAlert);
+    $('#email-validation-alert').on('close.bs.alert', toggleValidationAlert); 
 });
