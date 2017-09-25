@@ -428,17 +428,17 @@ section.alternative {
 
 /* --------- FIVE --------- */
 
-.five .transition {
+.member-box .transition {
   transition: .5s cubic-bezier(.3, 0, 0, 1.3)
 }
 
-.five {
+.member-box {
   list-style: none;
   padding: 0;
   margin: 100px 0;
 }
 
-.five>li {
+.member-box>li {
   background: #FFFFFF;
   border: 1px solid rgba(150, 150, 150, 0.29);
   -moz-box-shadow: 0px 0px 18px 0px rgba(103, 85, 85, 0.39);
@@ -450,19 +450,19 @@ section.alternative {
   text-align: center;
 }
 
-.five>li img,
-.five>li i {
+.member-box>li img,
+.member-box>li i {
   margin-top: -5px;
 }
 
-.five>li:hover img,
-.five>li:hover i {
+.member-box>li:hover img,
+.member-box>li:hover i {
   margin-top: 30px;
   color: #1D293A;
 }
 
-.five>li img.more-about,
-.five>li i.more-about {
+.member-box>li img.more-about,
+.member-box>li i.more-about {
   left: 103px;
   padding: 1px;
   position: absolute;
@@ -474,7 +474,7 @@ section.alternative {
   bottom: 50px;
 }
 
-.five>li i.more-about {
+.member-box>li i.more-about {
   left: 103px;
   padding: 1px;
   position: absolute;
@@ -484,20 +484,20 @@ section.alternative {
   color: #1D293A;
 }
 
-.five>li:hover .wrapper>i {
+.member-box>li:hover .wrapper>i {
   display: none;
 }
 
-.five>li:hover i {
+.member-box>li:hover i {
   margin-top: 30px;
 }
 
-.five>li:hover {
+.member-box>li:hover {
   -moz-box-shadow: 0px 0px 5px 0px rgba(103, 85, 85, 0.25);
   box-shadow: 0px 0px 5px 0px rgba(103, 85, 85, 0.25);
 }
 
-.five>li:hover .more-info-wrapper {
+.member-box>li:hover .more-info-wrapper {
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -505,16 +505,16 @@ section.alternative {
   background: #1D293A;
 }
 
-.five>li:hover .more-info-wrapper p {
+.member-box>li:hover .more-info-wrapper p {
   color: white;
   font-size: 14px;
 }
 
-.five>li .more-info-wrapper .text-wrapper {
+.member-box>li .more-info-wrapper .text-wrapper {
   opacity: 0;
 }
 
-.five>li:hover .more-info-wrapper .text-wrapper {
+.member-box>li:hover .more-info-wrapper .text-wrapper {
   bottom: 20px;
   left: 0;
   margin: 0 auto;
@@ -524,27 +524,27 @@ section.alternative {
   opacity: 1;
 }
 
-.five>li:hover .social {
+.member-box>li:hover .social {
   margin-top: 250px;
 }
 
-.five>li:hover .wrapper>img {
+.member-box>li:hover .wrapper>img {
   display: none;
 }
 
-.five>li:hover h3 {
+.member-box>li:hover h3 {
   color: #1D293A;
   margin-top: -105px;
 }
 
-.five>li .wrapper {
+.member-box>li .wrapper {
   overflow: hidden;
   position: absolute;
   width: 250px;
   height: 350px;
 }
 
-.five>li .more-info-wrapper {
+.member-box>li .more-info-wrapper {
   display: block;
   height: 500px;
   left: -125px;
@@ -554,11 +554,11 @@ section.alternative {
   background: #1D293A;
 }
 
-.five .member-img {
+.member-box .member-img {
   width: 120px;
 }
 
-.five>li h3 em {
+.member-box>li h3 em {
   display: block;
   font-style: normal;
   text-transform: uppercase;
@@ -568,37 +568,37 @@ section.alternative {
   color: #1D293A;
 }
 
-.five .social {
+.member-box .social {
   list-style: none;
   text-align: center;
   margin: 10px 0 0 0;
   padding: 10px;
 }
 
-.five .social li {
+.member-box .social li {
   opacity: 0;
   display: inline-block;
   padding: 5px;
 }
 
-.five>li:hover .social li {
+.member-box>li:hover .social li {
   opacity: 0.5;
 }
 
-.five .social li a {
+.member-box .social li a {
   cursor: pointer;
   display: block;
 }
 
-.five .social li a:hover {
+.member-box .social li a:hover {
   opacity: 0.5;
 }
 
-.five .social li i {
+.member-box .social li i {
   width: 24px;
 }
 
-.five>li:hover .social li a {
+.member-box>li:hover .social li a {
   -webkit-animation: social-show 0.5s 1;
   -moz-animation: social-show 0.5s 1;
   -o-animation: social-show 0.5s 1;
@@ -609,7 +609,7 @@ section.alternative {
   animation-delay: 0s;
 }
 
-.five .social li i {
+.member-box .social li i {
   width: 24px;
 }
 
