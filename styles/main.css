@@ -941,12 +941,12 @@ section.alternative {
 
 /* CAROUSEL*/
 
-#myCarousel {
+#media-carousel {
   background: rgba(255, 255, 255, 0.1);
   padding: 50px;
 }
 
-#myCarousel a {
+#media-carousel a {
   color: white;
   text-decoration: none;
 }
