@@ -5,6 +5,7 @@ $(function () {
   loadPlayer();
   initializeEvents();
   initializeDB();
+  checkAcceptCookies();
 
   function loadPlayer() {
     if (typeof (YT) == 'undefined' || typeof (YT.Player) == 'undefined') {
@@ -24,7 +25,6 @@ $(function () {
 
   function onYouTubePlayer() {
     player1 = new YT.Player('player');
-    console.log('4nto')
   }
 
   function initializeEvents() {
@@ -52,9 +52,16 @@ $(function () {
       $('#' + $(this).data('modal-id')).modal();
     });
 
+    $('#legal-advice-link-cookies').on('click', function (e) {
+      e.preventDefault();
+      $('#' + $(this).data('modal-id')).modal();
+    });
+
     $('#email-success-alert').on('close.bs.alert', toggleSuccessAlert);
     $('#email-error-alert').on('close.bs.alert', toggleErrorAlert);
     $('#email-validation-alert').on('close.bs.alert', toggleValidationAlert);
+
+    $('#accept-cookies-btn').on('click', acceptCookies);
 
     $('a[href*="#"]:not([href="#"])').click(function () {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -128,4 +135,16 @@ $(function () {
     $('#email-validation-alert').toggleClass('in out');
     return false; // Keep close.bs.alert event from removing from DOM
   }
+
+  function checkAcceptCookies() {
+    if (localStorage.acceptCookies == 'true') {
+      $('#cookies-box').css('display', 'none');
+    }
+  }
+
+  function acceptCookies() {
+    localStorage.acceptCookies = 'true';
+    $('#cookies-box').css('display', 'none');
+  }
+
 });
