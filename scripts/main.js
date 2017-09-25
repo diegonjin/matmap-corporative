@@ -1,70 +1,72 @@
-$(function() {
+$(function () {
 
-    loadPlayer();
-    initializeEvents();
-    initializeDB();
-
-    function loadPlayer() { 
-        if (typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined') {
-      
-          var tag = document.createElement('script');
-          tag.src = "https://www.youtube.com/iframe_api";
-          var firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-      
-          window.onYouTubePlayerAPIReady = function() {
-            onYouTubePlayer();
-          };
-      
-        } else {
-      
-          onYouTubePlayer();
-      
-        }
-      }
-    
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
   var player1 = null;
-  
-    function onYouTubePlayer() {
-        player1 = new YT.Player('player');
-        console.log('4nto')
+
+  loadPlayer();
+  initializeEvents();
+  initializeDB();
+
+  function loadPlayer() {
+    if (typeof (YT) == 'undefined' || typeof (YT.Player) == 'undefined') {
+
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      window.onYouTubePlayerAPIReady = function () {
+        onYouTubePlayer();
+      };
+    } else {
+      onYouTubePlayer();
     }
+  }
+
+  function onYouTubePlayer() {
+    player1 = new YT.Player('player');
+    console.log('4nto')
+  }
 
   function initializeEvents() {
-    $('#btn-add-newsletters').on('click', function() {
+    $('#btn-add-newsletters').on('click', function () {
       saveEmail();
     });
-  
-    $('.launch-modal').on('click', function(e){
+
+    $('.launch-modal').on('click', function (e) {
       e.preventDefault();
-      $( '#' + $(this).data('modal-id') ).modal();
+      $('#' + $(this).data('modal-id')).modal();
     });
-    
+
     $('#modal-video').on('hidden.bs.modal', function () {
       // do something
       player1.stopVideo();
-    }); 
-    
-    $('#terms-and-conditions-link').on('click', function(e){
-      e.preventDefault();
-      $( '#' + $(this).data('modal-id') ).modal();
     });
 
-    $('#legal-advice-link').on('click', function(e){
+    $('#terms-and-conditions-link').on('click', function (e) {
       e.preventDefault();
-      $( '#' + $(this).data('modal-id') ).modal();
+      $('#' + $(this).data('modal-id')).modal();
+    });
+
+    $('#legal-advice-link').on('click', function (e) {
+      e.preventDefault();
+      $('#' + $(this).data('modal-id')).modal();
+    });
+
+    $('#email-success-alert').on('close.bs.alert', toggleSuccessAlert);
+    $('#email-error-alert').on('close.bs.alert', toggleErrorAlert);
+    $('#email-validation-alert').on('close.bs.alert', toggleValidationAlert);
+
+    $('a[href*="#"]:not([href="#"])').click(function () {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
     });
   }
 
@@ -84,7 +86,7 @@ $(function() {
     hideAlerts();
     try {
       var inputEmail = $('#input-email').val();
-      if(inputEmail && validateEmail(inputEmail)) {
+      if (inputEmail && validateEmail(inputEmail)) {
         var database = firebase.database().ref();
         database.child('emails').push(inputEmail);
         $('#input-email').val('');
@@ -93,7 +95,7 @@ $(function() {
         toggleValidationAlert();
       }
     } catch (error) {
-      toggleErrorAlert();      
+      toggleErrorAlert();
     }
 
     setTimeout(hideAlerts, 5000);
@@ -109,23 +111,21 @@ $(function() {
     $('.alert').addClass('hide out');
   }
 
-  function toggleSuccessAlert(){
-    $('#email-success-alert').toggleClass('show hide'); 
+  function toggleSuccessAlert() {
+    $('#email-success-alert').toggleClass('show hide');
     $('#email-success-alert').toggleClass('in out');
     return false; // Keep close.bs.alert event from removing from DOM
   }
 
-  function toggleErrorAlert(){
+  function toggleErrorAlert() {
     $('#email-error-alert').toggleClass('show hide');
-    $('#email-error-alert').toggleClass('in out'); 
+    $('#email-error-alert').toggleClass('in out');
     return false; // Keep close.bs.alert event from removing from DOM
   }
-  function toggleValidationAlert(){
+
+  function toggleValidationAlert() {
     $('#email-validation-alert').toggleClass('show hide');
-    $('#email-validation-alert').toggleClass('in out'); 
+    $('#email-validation-alert').toggleClass('in out');
     return false; // Keep close.bs.alert event from removing from DOM
   }
-    $('#email-success-alert').on('close.bs.alert', toggleSuccessAlert);
-    $('#email-error-alert').on('close.bs.alert', toggleErrorAlert);
-    $('#email-validation-alert').on('close.bs.alert', toggleValidationAlert); 
 });
