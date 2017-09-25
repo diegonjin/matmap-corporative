@@ -470,21 +470,21 @@ section.alternative {
   -moz-box-shadow: 0px 0px 5px 0px rgba(103,85,85,0.25);
   box-shadow: 0px 0px 5px 0px rgba(103,85,85,0.25);
 }
-.five > li:hover span {
+.five > li:hover .more-info-wrapper {
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   top: -300px;
   background: #1D293A;
 }
-.five > li:hover span p {
+.five > li:hover .more-info-wrapper p {
   color: white;
   font-size: 14px;
 }
-.five > li span .text-wrapper {
+.five > li .more-info-wrapper .text-wrapper {
   opacity: 0;
 }
-.five > li:hover span .text-wrapper {
+.five > li:hover .more-info-wrapper .text-wrapper {
   bottom: 20px;
   left: 0;
   margin: 0 auto;
@@ -509,7 +509,7 @@ section.alternative {
   width: 250px;
   height: 350px;
 }
-.five > li span {
+.five > li .more-info-wrapper {
   display: block;
   height: 500px;
   left: -125px;
