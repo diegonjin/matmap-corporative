@@ -1002,6 +1002,9 @@ section.alternative {
   padding: 10px;
   background-color: white;
 }
+.button-header {
+  margin-right: 50px;
+}
 
 .button {
   margin-top: 20px;
